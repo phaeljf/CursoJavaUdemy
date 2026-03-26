@@ -12,6 +12,9 @@ void main() {
     System.out.print("Enter salary: ");
     int salary = sc.nextInt();
 
+    System.out.print("Enter name for search: ");
+    char letter = sc.next().toUpperCase().charAt(0);
+
     String path = "D:\\teste\\employees.csv";
 
     try (BufferedReader br = new BufferedReader(new FileReader(path))){
@@ -28,24 +31,26 @@ void main() {
             line = br.readLine();
         }
 
-        emplooyers.stream()
-                .filter(e -> e.getSalary() > salary)
-                .map(Employee::getEmail)
-                .sorted()
-                .forEach(System.out::println);
-
 //        emplooyers.stream()
 //                .filter(e -> e.getSalary() > salary)
 //                .map(Employee::getEmail)
 //                .sorted()
 //                .forEach(System.out::println);
 
+        emplooyers.stream()
+                .filter(e -> e.getSalary() > salary)
+                .map(Employee::getEmail)
+                .sorted()
+                .forEach(System.out::println);
+
         double sum = emplooyers.stream()
-                .filter(e -> e.getName().charAt(0) == 'M')
+                .filter(e -> e.getName().toUpperCase().charAt(0) == letter)
                 .mapToDouble(Employee::getSalary)
                 .sum();
 
-        IO.print("Sum of salary of peole whose name starts with 'M': " + String.format("%.2f", sum));
+        IO.print("Sum of salary of people whose name starts with '"+ letter +"': " + String.format("%.2f", sum));
+
+        //IO.print("Sum of salary of people whose name starts with 'M': " + String.format("%.2f", sum));
 
     }catch(IOException ex){
         System.out.println("Error" + ex.getMessage());
