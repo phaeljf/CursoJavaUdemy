@@ -37,16 +37,16 @@ void main() throws FileNotFoundException {
         //System.out.printf("Average price: %.2f\n", avg);
         System.out.println("Average price: " + String.format("%.2f", avg));
 
-//        products.stream()
-//                .filter(p -> p.getPrice() < avg)
-//                .sorted(Comparator.reverseOrder())
-//                .forEach(p -> System.out.println(p.getName()));
-
         products.stream()
                 .filter(p -> p.getPrice() < avg)
-                .map(Product::getName)
                 .sorted(Comparator.reverseOrder())
-                .forEach(System.out::println);
+                .forEach(p -> System.out.println(p.getName()));
+
+//        products.stream()
+//                .filter(p -> p.getPrice() < avg)
+//                .map(Product::getName)
+//                .sorted(Comparator.reverseOrder())
+//                .forEach(System.out::println);
 
     } catch (IOException e) {
         System.err.println("Error: " + e.getMessage());
