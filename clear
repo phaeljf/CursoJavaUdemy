@@ -1,0 +1,23 @@
+[33mcommit d57dcbc35cf1ca126ef05d09ca5dae7f0af3b462[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: RAPHAEL DE LEMOS PIRES <raphaellpires@gmail.com>
+Date:   Thu Mar 26 07:37:26 2026 -0300
+
+    Exercicio21 Map - Alterado Stream para imprimir
+
+[33mcommit 8cb825f3e45237827b80b5578630a3d6ef9dbb6b[m
+Author: RAPHAEL DE LEMOS PIRES <raphaellpires@gmail.com>
+Date:   Thu Mar 26 07:31:35 2026 -0300
+
+    Modificado o strem para pesquisar lista de clientes
+
+[33mcommit 4c491480cc611a9b23228d2037483ca79e3f177f[m
+Author: RAPHAEL DE LEMOS PIRES <raphaellpires@gmail.com>
+Date:   Thu Mar 26 07:28:21 2026 -0300
+
+    Exercicio 22 (Stream) Modificado Main, modificado interação permitindo usuario pesquisar nome com a letra desejada
+
+[33mcommit 0bd02e677b661a6e13435a100ec8d46cf58e8565[m
+Author: RAPHAEL DE LEMOS PIRES <raphaellpires@gmail.com>
+Date:   Thu Mar 26 07:17:22 2026 -0300
+
+    Primeiro commit, Exercicios de 1 a 22 (até aula 210)
