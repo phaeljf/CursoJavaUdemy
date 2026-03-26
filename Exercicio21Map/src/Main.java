@@ -5,7 +5,7 @@ void main() {
     Scanner sc = new Scanner(System.in);
     IO.println("Enter file full path: ");
 //    String path = sc.nextLine();
-    String path = "D:\\teste\\in.csv";
+    String path = "D:\\teste\\election.csv";
 
     try (BufferedReader br = new BufferedReader(new FileReader(path))) {
 
@@ -23,11 +23,12 @@ void main() {
             }
             linha = br.readLine();
         }
+//        System.out.println();
+//        for (Map.Entry<String, Integer> candidate : election.entrySet()) {
+//            System.out.println(candidate.getKey() + ": " + candidate.getValue());
+//        }
         System.out.println();
-        for (Map.Entry<String, Integer> candidate : election.entrySet()) {
-            System.out.println(candidate.getKey() + ": " + candidate.getValue());
-        }
-
+        election.forEach((key, value) -> System.out.println(key + ": " + value));
 
 
     } catch (FileNotFoundException e) {
