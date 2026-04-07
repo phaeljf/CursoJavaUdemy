@@ -36,7 +36,7 @@ void main() {
     } catch (IOException e) {
         throw new RuntimeException(e);
     }
-
+    sc.close();
 }
 
 /*
